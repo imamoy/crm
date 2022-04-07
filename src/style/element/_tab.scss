@@ -1,0 +1,22 @@
+.borderBtn-tabs {
+    margin-top: 10px;
+    .v-tab {
+        border-radius: 30px;
+        height: 30px;
+        border: 1px solid $light-line;
+        margin: 0 10px;
+        font-size: 14px !important;
+    }
+    .v-slide-group__content {
+        justify-content: center;
+    }
+}
+
+.main-tabs {
+    > .v-tabs-bar {
+        border-bottom: 1px solid $light-line !important;
+    }
+    .v-tab {
+        font-size: 15px;
+    }
+}

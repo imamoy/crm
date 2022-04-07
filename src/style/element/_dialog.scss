@@ -1,0 +1,82 @@
+.to-deal-dialog {
+    .v-card__title {
+        background-color: rgba($deep-line,.4) !important;
+        padding-bottom: 20px !important;
+        h2 {
+            margin-bottom: 20px;
+        }
+        @include min-padpro {
+            min-height: 110px;
+            position: relative;
+            .card-preface {
+                width: calc(100% - 60px);
+                box-shadow: 0 4px 20px rgba($granite,.2) !important;
+                position: absolute;
+                bottom: -32px;
+            }
+        }
+    }
+    .v-card__text {
+        @include min-padpro {
+            padding-top: 50px;
+        }
+    }
+    .process-bar {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    .process-box {
+        background-color: transparent !important;
+    }
+    .go-deal-btn {
+        .v-btn__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .v-icon {
+                margin-bottom: 4px;
+            }
+        }
+    }
+}
+
+.statusDialog {
+    border-radius: 10px !important;
+    .v-card__text {
+        font-size: 16px;
+        text-align: center;
+    }
+    .v-btn {
+        font-size: 15px !important;
+    }
+}
+.contact-card {
+    .v-card__title {
+        border-bottom: 1px solid rgba($french-grey,.6);
+    }
+    .v-list-item {
+        border-bottom: 1px solid $light-line ;
+        &:last-child {
+            border: none;
+        }
+    }
+    .job-label {
+        display: inline-block;
+        font-size: 14px;
+        background-color: rgba($primary-status,.1);
+        border-radius: 4px;
+        padding: 2px 4px;
+    }
+}
+.dealDialog {
+    .process-bar.v-stepper__header {
+        margin-left: 0;
+        width: 100%;
+    }
+    .v-stepper__step:not(.v-stepper__step--inactive) {
+        .v-stepper__step__step {
+            background: rgba(0, 0, 0, 0.15);
+        }
+    }
+}

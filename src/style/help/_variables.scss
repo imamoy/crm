@@ -1,0 +1,33 @@
+/*==== common ====*/
+$dark-navy: #020932;
+$blue-zodiac: #1C1E4F;
+$granite: #808080;
+$white: #FFFFFF;
+$light-carmine-pink: #F05975;
+$dark-sky-blue: #518BF2;
+$deep-saffron: #F2A041;
+$green-haze: #00AA60;
+$medium-slate-blue: #7B68EE;
+$alice-blue: #F5F6FA;
+$dark-slate-blue: #3C3F88;
+$french-grey: #BEBEBE;
+
+/*==== Main Layout ====*/
+
+$light-line: rgba($french-grey,.5);
+$deep-line: $french-grey;
+
+$primary-text: $dark-navy;
+$normal-text: $granite;
+
+$normal-nav: $granite;
+$active-nav: $dark-navy;
+
+$primary-status: $dark-sky-blue;
+$success-status: $green-haze;
+$error-status: $light-carmine-pink;
+$waring-status: $deep-saffron;
+
+$primary-bg: $alice-blue;
+$primary-dp-bg: #ecedf3;
+$normal-bg: $white;

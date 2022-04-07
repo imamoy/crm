@@ -1,0 +1,160 @@
+.data-area {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .v-data-table-header {
+        th {
+            text-align: center !important;
+            padding-left: 1.8% !important;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 16px;
+                background-color: $french-grey;
+                position: absolute;
+                top: 7px;
+                right: 0;
+            }
+            &:first-child {
+                padding-left: 16px!important;
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .border-table {
+        .v-data-table-header {
+            th {
+                text-align: center !important;
+                padding-left: 1.8% !important;
+                font-size: 15px;
+                position: relative;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 16px;
+                    background-color: $french-grey;
+                    position: absolute;
+                    top: 17px;
+                    right: 0;
+                }
+                &:first-child {
+                    padding-left: 16px!important;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.deals-table.v-data-table {
+    background-color: transparent !important;
+    .v-data-table-header {
+        @include min-pad {
+            tr {
+                th {
+                    font-size: 14px;
+                    border: none !important;
+                    height: 30px !important;
+                    &:first-child {
+                        border-left: 8px solid $primary-bg !important;
+                    }
+                    &:last-child {
+                        border-right: 8px solid $primary-bg !important;
+                    }
+                }
+            }
+        }
+    }
+    .v-data-table-header-mobile {
+        th {
+            padding: 0!important;
+        }
+    }
+    tbody {
+        @include min-pad {
+            tr {
+                border-radius: 10px;
+                position: relative;
+                td {
+                    height: 68px !important;
+                    background-color: $normal-bg!important;
+                    border-top: 8px solid $primary-bg;
+                    border-bottom: 8px solid $primary-bg!important;
+                    padding: 20px 0;
+                    font-size: 14px !important;
+                    &:first-child {
+                        border-radius: 16px 0 0 16px;
+                        border-left: 8px solid $primary-bg !important;
+                    }
+                    &:last-child {
+                        border-radius: 0 16px 16px 0;
+                        border-right: 8px solid $primary-bg !important;
+                    }
+                }
+            }
+        }
+        @include max-phone {
+            tr {
+                background-color: $normal-bg;
+                position: relative;
+                margin-bottom: 20px;
+                td {
+                    height: 40px !important;
+                    min-height: 40px !important;
+                }
+            }
+        }
+    }
+    .v-data-table__checkbox {
+        margin-left: 14px;
+    }
+    .v-system-bar {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        width: 8px !important;
+        height: calc(100% - 16px) !important;
+        border-radius: 8px 0 0 8px;
+        padding: 0;
+        @include max-phone {
+            top: 0;
+            left: 0;
+            height: 100% !important;
+        }
+    }
+}
+.dashboard-table {
+    margin-top: 10px;
+    thead {
+        tr{
+            border-radius: 10px;
+        }
+        th {
+            background-color: rgba($light-line,0.24);
+            text-align: center !important;
+            padding: 10px 5px!important;
+            border-bottom: none!important;
+            &:first-child {
+                border-radius: 5px 0 0 5px;
+            }
+            &:last-child {
+                border-radius: 0 5px 5px 0;
+            }
+        }
+    }
+    th,td {
+        font-size: 15px !important;
+        padding: 5px 6px !important;
+    }
+}

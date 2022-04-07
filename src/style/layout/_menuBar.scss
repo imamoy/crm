@@ -1,0 +1,99 @@
+#menu-bar {
+    width: 80px;
+    height: 100vh;
+    background-color: $normal-bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .logo {
+        img {
+            width: 46px;
+        }
+    }
+
+    .v-list {
+        .v-btn {
+            background-color: transparent;
+            color: $normal-nav;
+            position: relative;
+            &::before {
+                width: 8px;
+                height: 100%;
+                border-radius: 0 10px 10px 0;
+                left: -22px;
+                opacity: 0;
+            }
+
+            &.v-btn--active {
+                color: $active-nav;
+            }
+        }
+    }
+
+    @include max-notebook {
+        width: 70px;
+    }
+    @include max-phone {
+        flex-direction: row;
+        height: 60px !important;
+        width: 100%;
+        padding: 4px 0 !important;
+        z-index: 99;
+        .top {
+            width: 60px;
+            > div {
+                margin-bottom: 0 !important;
+            }
+            .logo {
+                margin-left: 14px!important;
+                margin-top: 4px !important;
+                img {
+                    width: 40px !important;
+                }
+            }
+        }
+        .bottom {
+            width: calc(100% - 60px);
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding: 10px;
+            padding-right: 14px;
+            .v-avatar{
+                width: 34px !important;
+                min-width: 34px !important;
+                height: 34px !important;
+            }
+        }
+        .nav {
+            background-color: $primary-bg;
+            position: fixed;
+            top: -100%;
+            width: 100%;
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transition: .25s opacity;
+            .nav-btn {
+                background-color: transparent!important;
+                .v-icon {
+                    margin-right: 10px;
+                }
+            }
+            &.is-active {
+                top: 60px;
+                opacity: 1;
+            }
+        }
+        .hamburger {
+            margin-left: 0px;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.v-timeline-item__inner-dot {
+    width: 30px !important;
+    height: 30px !important;
+    .v-icon {
+        font-size: 14 !important;
+    }
+}
+.v-timeline-item__divider {
+    min-width: 50px !important;
+    justify-content: flex-start !important;
+    padding-top: 9px;
+}
+.v-timeline--dense .v-timeline-item__body {
+    max-width: calc(100% - 50px) !important;
+}
+.v-application--is-ltr .v-timeline--dense:not(.v-timeline--reverse):before {
+    top: 10px;
+    left: calc(15px - 1px) !important;
+    width: 3px;
+    background-color: $success-status;
+}
+
+.v-timeline {
+    .v-timeline-item {
+        padding-bottom: 10px !important;
+        .detail {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .v-card__subtitle {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    .timeLine-note {
+        background-color: #FEFCDC !important;
+    }
+    &::before {
+        left: 14px;
+    }
+}

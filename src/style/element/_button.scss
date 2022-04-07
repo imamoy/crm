@@ -1,0 +1,68 @@
+.btn-switch,
+.btn-group {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid $deep-line;
+    overflow: hidden;
+
+    .v-btn.theme--dark:not(.primary) {
+        color: $normal-text;
+    }
+}
+
+.btn-group {
+    align-items: flex-start;
+}
+
+.hamburger {
+    display: block !important; 
+    background-color: white !important;
+    .v-btn__content {
+        display: block !important; 
+    }
+    .line {
+        width: 30px;
+        height: 4px;
+        background-color: $deep-line;
+        display: block;
+        margin: 6px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::before {
+        display: none;
+    }
+
+    &.is-active {
+        .line:nth-child(2) {
+            opacity: 0;
+        }
+        .line:nth-child(1) {
+            -webkit-transform: translateY(12px) rotate(45deg);
+            -ms-transform: translateY(12px) rotate(45deg);
+            -o-transform: translateY(12px) rotate(45deg);
+            transform: translateY(12px) rotate(45deg);
+        }
+        .line:nth-child(3) {
+            -webkit-transform: translateY(-8px) rotate(-45deg);
+            -ms-transform: translateY(-8px) rotate(-45deg);
+            -o-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    }
+}
+.add-deal-btn {
+    width: 36px !important;
+    height: 36px !important;
+    @include max-phone {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}

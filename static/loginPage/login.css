@@ -1,0 +1,32 @@
+/*------------------- Responsive --------------------------*/
+
+#login {
+  min-height: 90vh;
+  padding-top: 14vh;
+  text-align: center;
+}
+
+@media (min-width: 1501px) {
+  #login .container {
+    max-width: 1040px !important;
+  }
+}
+
+#login h2,
+#login h3 {
+  font-weight: 600;
+}
+
+#login .login-box {
+  width: 30vw;
+  min-width: 300px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px 20px;
+  margin: 0 auto;
+}
+
+#login a {
+  color: #518BF2;
+}

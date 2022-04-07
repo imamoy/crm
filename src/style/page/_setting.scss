@@ -1,0 +1,214 @@
+#Setting,
+.setting-dialog {
+    .v-tabs-bar {
+        background-color: transparent !important;
+
+        .v-tab {
+            text-transform: capitalize;
+            border: none !important;
+            justify-content: start !important;
+            font-size: 14.8px;
+            letter-spacing: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .v-window {
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .v-window-item {
+        height: 100%;
+    }
+
+    .setting-title {
+        border-bottom: 1px solid $light-line;
+    }
+
+    .setting-inner {
+        max-width: 640px;
+        padding: 40px 20px;
+        margin: 0 auto;
+        height: calc(100% - 61px);
+    }
+
+    label {
+        display: block;
+        min-width: 100px;
+        font-weight: 500;
+        margin-bottom: 6px;
+        color: $normal-text;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    .v-input__slot {
+        border-radius: 6px;
+        padding: 4px 14px;
+        background-color: rgba($primary-dp-bg, 0.8) !important;
+        box-shadow: 0 0 0 0 !important;
+
+        .v-input__control {
+            border: none !important;
+        }
+    }
+
+    .v-btn {
+        border-radius: 6px;
+    }
+}
+
+#app {
+    .process-setting-item.v-card {
+        border: 1px solid $french-grey !important;
+        border-radius: 8px !important;
+        padding: 12px;
+        padding-left: 8px;
+        margin-bottom: 12px;
+
+        .process-setting-item-title {
+            font-size: 18px;
+        }
+
+        .process-bar.v-stepper__header {
+            width: 100%;
+            height: 30px;
+            margin-left: 0;
+
+            .v-stepper__step {
+                font-size: 12px;
+                padding: 4px;
+                color: #FFF;
+                margin-left: 0;
+                border-radius: 0 !important;
+                margin-right: 0;
+
+                &.v-stepper__step--inactive {
+                    background-color: $primary-dp-bg !important;
+                }
+
+                .v-stepper__label {
+                    display: inline-block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: center;
+                    width: 70%;
+                    margin-left: -6px;
+                }
+
+                .v-stepper__step__step {
+                    height: 32px;
+                    width: 32px;
+                    color: $primary-dp-bg !important;
+                    background-color: #FFF !important;
+                    margin-right: -12px;
+
+                    &::before {
+                        content: '\e815';
+                        color: $primary-text;
+                        font-family: "fontello";
+                        font-size: 10px;
+                        position: absolute;
+                    }
+                }
+
+                &.primary {
+                    background-color: $primary-status !important;
+
+                    .v-stepper__step__step {
+                        &::before {
+                            color: $primary-status !important;
+                        }
+                    }
+                }
+
+                &.orange {
+                    background-color: $waring-status !important;
+
+                    .v-stepper__step__step {
+                        &::before {
+                            color: $waring-status !important;
+                        }
+                    }
+                }
+
+                &.green {
+                    background-color: $success-status !important;
+
+                    .v-stepper__step__step {
+                        &::before {
+                            color: $success-status !important;
+                        }
+                    }
+                }
+
+                &.purple {
+                    background-color: $medium-slate-blue !important;
+
+                    .v-stepper__step__step {
+                        &::before {
+                            color: $medium-slate-blue !important;
+                        }
+                    }
+                }
+
+                &.red {
+                    background-color: $error-status !important;
+
+                    .v-stepper__step__step {
+                        &::before {
+                            color: $error-status !important;
+                        }
+                    }
+                }
+
+                &.gary {
+                    background-color: $granite !important;
+
+                    .v-stepper__step__step {
+                        &::before {
+                            color: $granite !important;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    border-radius: 30px 0 0 30px !important;
+                }
+
+                &:last-child {
+                    border-radius: 0 30px 30px 0 !important;
+
+                    .v-stepper__step__step {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.emailFields {
+    min-height: 260px;
+
+    .v-tab {
+        min-width: auto;
+        width: 64px;
+    }
+
+    .v-window {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+}
+
+.editor-custom-toolbar {
+    border: 1px solid #CCC;
+    border-top: none;
+}

@@ -1,0 +1,286 @@
+@import '../help/mixin';
+@import '../help/rwd';
+
+#Deals {
+    #page-inner {
+        > .row {
+            .col {
+                min-height: 20%;
+            }
+        }
+        @include max-pad {
+            height: calc(100% - 100px) !important;
+            margin-top: 20px;
+        }
+    }
+    .deal-group {
+        height: 100%;
+        border-radius: 8px;
+        background-color: transparent;
+        border: 1px dashed $french-grey;
+        border-top: none;
+        padding: 20px 0 10px;
+        position: relative;
+        .v-system-bar {
+            width: calc(100% + 2px);
+            position: absolute;
+            top: 0;
+            left: -1px;
+            z-index: 50;
+        }
+        * {
+            line-height: 1.4;
+        }
+        > .v-card__title, > .deals-totalAmount, > .v-card__text {
+            padding: 0 10px !important;
+        }
+        > .v-card__text {
+            @include scroll-bar-style;
+        }
+        .v-avatar {
+            margin-right: -2px;
+        }
+        .v-menu {
+            & + .v-btn {
+                margin-top: -6px;
+            }
+        }
+        > .v-card__text {
+            height: calc(100% - 100px);
+            overflow-y: auto;
+        }
+
+        h4, h5 {
+            -webkit-line-clamp: 1;
+        }
+        .v-card__actions {
+            opacity: 0;
+            transition: .25s opacity;
+        }
+
+        &:hover {
+            .v-card__actions {
+                opacity: 1;
+            }
+        }
+        @include min-pad {
+            padding-bottom: 0;
+        }
+        @include max-pad {
+            > .v-card__text {
+                height: calc(100% - 40px);
+                overflow-y: auto;
+            }
+            .v-card__actions {
+                display: none!important;
+            }
+        }
+    }
+    .deals-item {
+        padding: 10px 10px 8px;
+        margin: 10px 0;
+        @include min-pad {
+            padding: 8px 10px 6px;
+            border: 2px solid transparent;
+            &:hover {
+                border: 2px solid $dark-sky-blue;
+            }
+        }
+        .drag-icon {
+            margin-left: -7px;
+        }
+    }
+    .data-area {
+        @include max-pad {
+            height: calc(100% - 60px);
+        }
+    }
+}
+
+.to-deal-dialog {
+    .v-card__title {
+        background-color: rgba($deep-line,.4) !important;
+        padding-bottom: 20px !important;
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+    .process-bar {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+.deals-filter {
+    padding: 4px 0;
+    @include max-pad {
+        display: none;
+        background-color: #fff;
+        padding: 14px 10px !important;
+        margin: 0 10px !important;
+        width: calc(100% - 22px) !important;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        z-index: 90;
+        opacity: 0;
+        transition: .25s opacity;
+        box-shadow: 0 4px 10px rgba(0,0,0,.2);
+        border-radius: 8px 0 8px 8px;
+        border: 1px solid transparent;
+        .row > * {
+            padding: 10px 0 !important;
+        }
+        &.active {
+            display: block;
+            border: 1px solid $deep-line;
+            opacity: 1;
+        }
+    }
+    @include max-phone {
+        width: calc(100% - 20px) !important;
+        top: 91px;
+    }
+}
+.deals-filter-btn {
+    display: none !important;
+    @include max-pad {
+        display: inline-block !important;
+        &.active {
+            background-color: #fff;
+            border-radius: 4px 4px 0 0;
+            border-bottom: none;
+            z-index: 91;
+            .v-btn {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+#Deal, #Account, #Contact {
+    #page-head {
+        max-height: 70px !important;
+    }
+    #page-inner {
+        @include min-padpro {
+            height: calc(100% - 90px) !important;
+            padding-bottom: 0!important;
+        }
+    }
+    .deal-content {
+        > * {
+            height: 100%;
+        }
+        @include min-padpro {
+            height: calc(100% - 350px);
+            &.big {
+                height: calc(100% - 175px);
+            }
+        }
+    }
+    @include max-pad {
+        &.main-page {
+            overflow-y: auto!important;
+        }
+    }
+}
+
+.deals-filter {
+    padding: 4px 0;
+    @include max-pad {
+        display: none;
+        background-color: #fff;
+        padding: 14px 10px !important;
+        margin: 0 10px !important;
+        width: calc(100% - 22px) !important;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        z-index: 90;
+        opacity: 0;
+        transition: .25s opacity;
+        box-shadow: 0 4px 10px rgba(0,0,0,.2);
+        border-radius: 8px 0 8px 8px;
+        border: 1px solid transparent;
+        .row > * {
+            padding: 10px 0 !important;
+        }
+        &.active {
+            display: block;
+            border: 1px solid $deep-line;
+            opacity: 1;
+        }
+    }
+    @include max-phone {
+        width: calc(100% - 20px) !important;
+        top: 91px;
+    }
+}
+.deals-filter-btn {
+    display: none !important;
+    @include max-pad {
+        display: inline-block !important;
+        &.active {
+            background-color: #fff;
+            border-radius: 4px 4px 0 0;
+            border-bottom: none;
+            z-index: 91;
+            .v-btn {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.deal-tab-card {
+    @include min-padpro {
+        height: 100%;
+        .main-tabs {
+            height: 100%;
+            .v-window {
+                height: calc(100% - 47px);
+                overflow-y: auto;
+                @include scroll-bar-style;
+            }
+        }
+    }
+}
+#Contact {
+    @include min-padpro {
+        overflow: hidden;
+        height: 100vh !important;
+        #page-inner {
+            height: calc(100vh - 118px) !important;
+        }
+    }
+}
+.account-info {
+    @include min-padpro {
+        height: calc(100% - 100px);
+        .deal-tab-card {
+            height: 100%;
+        }
+        > * {
+            height: 100%;
+        }
+    }
+}
+
+
+.card-shadow {
+    box-shadow: 0 4px 20px rgba($dark-sky-blue,.1) !important;
+}
+.small-deals-box {
+    height: 132px;
+    overflow: hidden;
+
+    &.show-more {
+        height: auto;
+        overflow: visible;
+    }
+}
