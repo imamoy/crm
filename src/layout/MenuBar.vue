@@ -54,12 +54,6 @@
 						active: 'icon-home'
 					},
 					{
-						path: '/Dashboard',
-						name: 'Dashboard',
-						normal: 'icon-dashboard-border',
-						active: 'icon-dashboard',
-					},
-					{
 						path: '/Deals',
 						name: 'Deals',
 						normal: 'icon-chatmoney-border',
